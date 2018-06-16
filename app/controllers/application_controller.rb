@@ -21,10 +21,10 @@ class ApplicationController < Sinatra::Base
   end
 
   get '/account' do
-    if is_logged_in?(session)
-      erb :account
-    else
+    if session[:user_id] = nil
       erb :error
+    else
+      erb :account
     end
   end
 
