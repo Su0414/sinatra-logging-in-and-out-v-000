@@ -26,6 +26,7 @@ class ApplicationController < Sinatra::Base
     else
       raise params.inspect
       binding.pry
+      @user = current_user(session)
       erb :account
     end
   end
