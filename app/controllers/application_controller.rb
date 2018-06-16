@@ -33,7 +33,7 @@ class ApplicationController < Sinatra::Base
       session.clear
       redirect '/'
     else
-        erb :error
+        redirect :error
     end
   end
 
