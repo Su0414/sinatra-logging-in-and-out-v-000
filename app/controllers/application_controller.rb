@@ -29,12 +29,10 @@ class ApplicationController < Sinatra::Base
   end
 
   get '/logout' do
-    if is_logged_in?(session)
+    
       session.clear
       redirect '/'
-    else
-        redirect :error
-    end
+  
   end
 
 
