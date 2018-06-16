@@ -24,7 +24,7 @@ class ApplicationController < Sinatra::Base
     if session[:user_id] == nil
       erb :error
     else
-      raise params.inspect
+
       binding.pry
       @user = current_user(session)
       erb :account
